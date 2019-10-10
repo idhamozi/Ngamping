@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/Background_login">
+    android:background="@drawable/background_login3">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="250dp"
         android:layout_height="400dp"
         app:cardBackgroundColor="#FFFFFF"
@@ -25,11 +26,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@+id/username"
-                android:text="Login"
+                android:text="@string/login"
                 android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/username"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -48,27 +49,28 @@
                 android:id="@+id/Login_btn"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:background="@drawable/login_background"
                 android:text="@string/login"
+                android:textColor="@android:color/white"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/password"
-                android:background="@drawable/login_background"/>
+                android:onClick="GoHome"/>
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:hint="@string/username"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/password"
@@ -77,13 +79,13 @@
                 android:layout_marginBottom="32dp"
                 android:ems="10"
                 android:hint="@string/password"
+                android:importantForAutofill="no"
                 android:inputType="textPassword"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/username"
-                app:layout_constraintVertical_bias="0.050000012"
-                android:importantForAutofill="no"/>
+                app:layout_constraintVertical_bias="0.050000012" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
