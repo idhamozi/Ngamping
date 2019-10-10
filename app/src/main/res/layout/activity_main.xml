@@ -22,10 +22,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/username"
+                android:text="Login"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
             <View
-                android:layout_width="150dp"
+                android:id="@+id/view2"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/Logo"
+                android:background="@drawable/user_background"
                 app:layout_constraintBottom_toTopOf="@+id/username"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
