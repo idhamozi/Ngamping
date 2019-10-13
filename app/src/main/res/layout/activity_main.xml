@@ -9,7 +9,7 @@
 
     <TextView
         android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:background="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
