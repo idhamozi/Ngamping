@@ -19,5 +19,13 @@
         "ticket": "100k",
         "desc": "ini deskripsi",
         "image": "https://cdn.idntimes.com/content-images/community/2018/12/campingasik-bn7cp2njkft-1-76eea788e2f363363decbb8a893806b0.jpg"
+    },
+    {
+        "name": "CobanTalun4",
+        "location": "1Dusun Junggo, Desa Tulung rejo, Kecamatan Bumiaji, Kota Batu, Propinsi Jawa Timur",
+        "ticket": "1000k",
+        "desc": "ini deskripsi cok",
+        "image": "https://cdn.idntimes.com/content-images/community/2018/12/campingasik-bn7cp2njkft-1-76eea788e2f363363decbb8a893806b0.jpg"
     }
+
 ]

@@ -26,8 +26,8 @@ import java.util.List;
 
 public class ListGroundActivity extends AppCompatActivity {
 
-    List<GroundCampData> campData = new ArrayList<GroundCampData>();
-
+    List<GroundCampData> campData = new ArrayList<>();
+    Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +40,16 @@ public class ListGroundActivity extends AppCompatActivity {
                 new ListGroundAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(int item) {
+                        bundle = new Bundle();
+
+                        bundle.putString("nama",campData.get(item).getName());
+                        bundle.putString("location",campData.get(item).getLocation());
+                        bundle.putString("ticket",campData.get(item).getTicket());
+                        bundle.putString("desc",campData.get(item).getDescription());
+                        bundle.putString("image",campData.get(item).getImageUri());
+
                         Intent inten = new Intent(ListGroundActivity.this, GroundContent.class);
+                        inten.putExtras(bundle);
                         startActivity(inten);
                     }
                 });

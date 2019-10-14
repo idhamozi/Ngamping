@@ -7,7 +7,7 @@
     tools:context=".activity.GroundContent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/gambar_tempat"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/colorPrimary"
@@ -19,7 +19,7 @@
         android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/gambar_tempat"
         android:layout_margin="10dp">
 
 
