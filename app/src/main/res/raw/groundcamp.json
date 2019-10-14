@@ -1,53 +1,23 @@
 [
     {
         "name": "CobanTalun",
-        "location": "DusunJunggo, DesaTulungrejo, KecamatanBumiaji, Kota Batu, PropinsiJawaTimur",
+        "location": "Dusun Junggo, Desa Tulung rejo, Kecamatan Bumiaji, Kota Batu, Propinsi Jawa Timur",
         "ticket": "10k",
+        "desc": "ini deskripsi",
+        "image": "https://4.bp.blogspot.com/-GVY7X0WvIy4/WdST67728wI/AAAAAAAAAz4/7vzU61fnvZkSKE5YrAuKQ4F-xdkVntrrQCLcBGAs/s1600/IMG_20170909_114452_HDR.jpg"
+    },
+    {
+        "name": "CobanTalun2",
+        "location": "1Dusun Junggo, Desa Tulung rejo, Kecamatan Bumiaji, Kota Batu, Propinsi Jawa Timur",
+        "ticket": "100k",
+        "desc": "ini deskripsi",
+        "image": "https://live.staticflickr.com/3734/14291637964_dd164f65b6_b.jpg"
+    },
+    {
+        "name": "CobanTalun3",
+        "location": "1Dusun Junggo, Desa Tulung rejo, Kecamatan Bumiaji, Kota Batu, Propinsi Jawa Timur",
+        "ticket": "100k",
+        "desc": "ini deskripsi",
+        "image": "https://cdn.idntimes.com/content-images/community/2018/12/campingasik-bn7cp2njkft-1-76eea788e2f363363decbb8a893806b0.jpg"
     }
 ]
-
-private void addMenuItemsFromJson() {
-    try {
-    String jsonDataString = readJsonDataFromFile();
-    JSONArray menuItemsJsonArray = new JSONArray(jsonDataString);
-
-    for (int i = 0; i < menuItemsJsonArray.length(); ++i) {
-
-    JSONObject menuItemObject = menuItemsJsonArray.getJSONObject(i);
-
-    String menuItemName = menuItemObject.getString("name");
-    String menuItemDescription = menuItemObject.getString("description");
-    String menuItemPrice = menuItemObject.getString("price");
-    String menuItemCategory = menuItemObject.getString("category");
-    String menuItemImageName = menuItemObject.getString("photo");
-
-    Pojo pojo = new Pojo(menuItemName, menuItemDescription, menuItemPrice,
-    menuItemCategory, menuItemImageName);
-    mRecyclerViewItems.add(pojo);
-}
-} catch (IOException | JSONException exception) {
-Log.e(MainActivity.class.getName(), "Unable to parse JSON file.", exception);
-}
-}
-
-private String readJsonDataFromFile() throws IOException {
-
-InputStream inputStream = null;
-StringBuilder builder = new StringBuilder();
-
-try {
-String jsonDataString = null;
-inputStream = getResources().openRawResource(R.raw.menu_item);
-BufferedReader bufferedReader = new BufferedReader(
-new InputStreamReader(inputStream, "UTF-8"));
-while ((jsonDataString = bufferedReader.readLine()) != null) {
-builder.append(jsonDataString);
-}
-} finally {
-if (inputStream != null) {
-inputStream.close();
-}
-}
-
-return new String(builder);
-}
