@@ -1,6 +1,5 @@
 package com.example.midterm.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,11 +10,12 @@ import com.example.midterm.ListGroundAdapter;
 import com.example.midterm.R;
 import com.example.midterm.models.GroundCampData;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListGroundActivity extends AppCompatActivity {
 
-    List<GroundCampData> campData;
+    List<GroundCampData> campData = new ArrayList<GroundCampData>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class ListGroundActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.ground_list_recycler);
         ListGroundAdapter groundAdapter = new ListGroundAdapter(this, campData);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
         recyclerView.setAdapter(groundAdapter);
     }
 }
