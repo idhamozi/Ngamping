@@ -1,0 +1,53 @@
+[
+    {
+        "name": "CobanTalun",
+        "location": "DusunJunggo, DesaTulungrejo, KecamatanBumiaji, Kota Batu, PropinsiJawaTimur",
+        "ticket": "10k",
+    }
+]
+
+private void addMenuItemsFromJson() {
+    try {
+    String jsonDataString = readJsonDataFromFile();
+    JSONArray menuItemsJsonArray = new JSONArray(jsonDataString);
+
+    for (int i = 0; i < menuItemsJsonArray.length(); ++i) {
+
+    JSONObject menuItemObject = menuItemsJsonArray.getJSONObject(i);
+
+    String menuItemName = menuItemObject.getString("name");
+    String menuItemDescription = menuItemObject.getString("description");
+    String menuItemPrice = menuItemObject.getString("price");
+    String menuItemCategory = menuItemObject.getString("category");
+    String menuItemImageName = menuItemObject.getString("photo");
+
+    Pojo pojo = new Pojo(menuItemName, menuItemDescription, menuItemPrice,
+    menuItemCategory, menuItemImageName);
+    mRecyclerViewItems.add(pojo);
+}
+} catch (IOException | JSONException exception) {
+Log.e(MainActivity.class.getName(), "Unable to parse JSON file.", exception);
+}
+}
+
+private String readJsonDataFromFile() throws IOException {
+
+InputStream inputStream = null;
+StringBuilder builder = new StringBuilder();
+
+try {
+String jsonDataString = null;
+inputStream = getResources().openRawResource(R.raw.menu_item);
+BufferedReader bufferedReader = new BufferedReader(
+new InputStreamReader(inputStream, "UTF-8"));
+while ((jsonDataString = bufferedReader.readLine()) != null) {
+builder.append(jsonDataString);
+}
+} finally {
+if (inputStream != null) {
+inputStream.close();
+}
+}
+
+return new String(builder);
+}
