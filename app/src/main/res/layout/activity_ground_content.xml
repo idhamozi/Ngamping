@@ -15,77 +15,98 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/gambar_tempat"
-        android:layout_margin="10dp">
-
+        android:layout_height="525dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/gambar_tempat">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/nama_tempat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:shadowColor="@color/colorPrimary"
-                android:shadowDx="-1"
-                android:shadowDy="-1"
-                android:shadowRadius="2"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                />
-
-            <TextView
-                android:id="@+id/lokasi_tempat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:shadowColor="@color/colorPrimary"
-                android:shadowDx="-1"
-                android:shadowDy="-1"
-                android:shadowRadius="1"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                />
-
-            <TextView
-                android:id="@+id/ticket_tempat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:shadowColor="@color/colorPrimary"
-                android:shadowDx="-1"
-                android:shadowDy="-1"
-                android:shadowRadius="2"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2"
-        android:layout_margin="10dp">
-
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:shadowColor="@color/colorPrimary"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="2"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            />
-    </androidx.cardview.widget.CardView>
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nama_tempat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:shadowColor="@color/colorPrimary"
+                        android:shadowDx="-1"
+                        android:shadowDy="-1"
+                        android:shadowRadius="2" />
+
+                    <TextView
+                        android:id="@+id/lokasi_tempat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:shadowColor="@color/colorPrimary"
+                        android:shadowDx="-1"
+                        android:shadowDy="-1"
+                        android:shadowRadius="1" />
+
+                    <TextView
+                        android:id="@+id/ticket_tempat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:shadowColor="@color/colorPrimary"
+                        android:shadowDx="-1"
+                        android:shadowDy="-1"
+                        android:shadowRadius="2" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="425dp"
+                android:layout_margin="10dp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:shadowColor="@color/colorPrimary"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

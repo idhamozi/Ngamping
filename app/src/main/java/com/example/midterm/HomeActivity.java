@@ -7,15 +7,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.midterm.activity.ListGroundActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button About;
-    Button InfoCamp;
-    Button Keluar;
+    ImageButton About;
+    ImageButton InfoCamp;
+    ImageButton Keluar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,26 +23,34 @@ public class HomeActivity extends AppCompatActivity {
 
         Keluar = findViewById(R.id.exit);
         InfoCamp = findViewById(R.id.infocamp);
+        About = findViewById(R.id.about1);
 
         Keluar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
-                builder.setTitle("KELUAR APLIKASI");
-                builder.setMessage("Anda Yakin Keluar ?");
-                builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(HomeActivity.this)
+                .setTitle("KELUAR APLIKASI")
+                .setMessage("Anda Yakin Keluar ?")
+                .setNegativeButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finish();
                     }
-                }).create().show();
-                builder.setPositiveButton("NO", null).create().show();
+                })
+                .setPositiveButton("NO", null).create().show();
             }
         });
         InfoCamp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, ListGroundActivity.class);
+                startActivity(intent);
+            }
+        });
+        About.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, about.class);
                 startActivity(intent);
             }
         });

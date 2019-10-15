@@ -5,53 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:background="@drawable/home_background">
+    android:background="@drawable/backgroud_home">
 
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:background="@drawable/logo"
-
-        app:layout_constraintBottom_toTopOf="@+id/infocamp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/infocamp"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:background="@drawable/iconcamp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="194dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/about"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:background="@drawable/iconttgkami"
+        android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infocamp"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="#8CFFFFFF">
 
-    <Button
-        android:id="@+id/exit"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/iconkeluar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about"
-        app:layout_constraintVertical_bias="0.223" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/infocamp"
+                android:layout_width="75dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/infocampp1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <ImageButton
+                android:id="@+id/about1"
+                android:layout_width="75dp"
+                android:layout_height="80dp"
+                android:background="@drawable/about1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/exit"
+                app:layout_constraintStart_toEndOf="@+id/infocamp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <ImageButton
+                android:id="@+id/exit"
+                android:layout_width="75dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/exit1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
