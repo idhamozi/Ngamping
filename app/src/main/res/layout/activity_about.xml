@@ -75,8 +75,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:text="IDHAM \n 17081010044"
+                android:layout_marginEnd="25dp"
+                android:text="Mohammad \n Idham Fachrurrozi \n 17081010044"
                 android:textStyle="bold" />
 
             <ImageView
