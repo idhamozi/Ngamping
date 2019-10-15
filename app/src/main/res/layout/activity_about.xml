@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".about"
-    android:background="@drawable/background_about">
+    android:background="@drawable/background_about2">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/About_1"
@@ -76,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
-                android:text="Mohammad \n Idham Fachrurrozi \n 17081010044"
+                android:text="Mohammad \nIdham Fachrurrozi \n17081010044"
                 android:textStyle="bold" />
 
             <ImageView
