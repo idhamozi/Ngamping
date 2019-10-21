@@ -42,6 +42,7 @@
                     <TextView
                         android:id="@+id/nama_tempat"
                         android:textSize="20dp"
+                        android:gravity="center"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:padding="10dp"
