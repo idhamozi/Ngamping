@@ -41,6 +41,10 @@
 
                     <TextView
                         android:id="@+id/nama_tempat"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -52,6 +56,7 @@
 
                     <TextView
                         android:id="@+id/lokasi_tempat"
+                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -63,6 +68,7 @@
 
                     <TextView
                         android:id="@+id/ticket_tempat"
+                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -93,6 +99,7 @@
 
                         <TextView
                             android:id="@+id/desc"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"

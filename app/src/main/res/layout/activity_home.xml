@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:background="@drawable/backgroud_home">
+    android:background="@drawable/background_home">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
