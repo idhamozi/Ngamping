@@ -35,7 +35,7 @@
             <ImageButton
                 android:id="@+id/infocamp"
                 android:layout_width="75dp"
-                android:layout_height="80dp"
+                android:layout_height="85dp"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/infocampp1"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -46,7 +46,7 @@
             <ImageButton
                 android:id="@+id/about1"
                 android:layout_width="75dp"
-                android:layout_height="80dp"
+                android:layout_height="85dp"
                 android:background="@drawable/about1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/exit"
@@ -57,7 +57,7 @@
             <ImageButton
                 android:id="@+id/exit"
                 android:layout_width="75dp"
-                android:layout_height="80dp"
+                android:layout_height="85dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/exit1"
                 app:layout_constraintBottom_toBottomOf="parent"
