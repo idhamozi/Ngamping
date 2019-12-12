@@ -1,5 +1,5 @@
 # final-project
-Berikut adalah kompilasi dari tugas tugas yang telah dikerjakan oleh Mahasiswa Kelas Mobile 2019. Untuk setiap File Kelompok bisa diperiksa disetiap branch kelompok. Bagi kelompok yang belum bisa upload silahkan kontak komting Aplikasi Mobile
+Berikut adalah Final Project yang telah dikerjakan oleh Mahasiswa Kelas Aplikasi Mobile 2019. Untuk setiap File Kelompok bisa diperiksa disetiap branch kelompok. Bagi kelompok yang belum bisa upload silahkan kontak komting Aplikasi Mobile
 <br>
 
 Kelompok 1. (keluar)
