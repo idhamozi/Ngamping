@@ -3,13 +3,32 @@ package com.example.midterm.models;
 public class GroundCampData {
 
     String name,location,ticket,description,imageUri;
+    double lat,lng;
 
-    public GroundCampData(String name, String location, String ticket, String description, String imageUri) {
+    public GroundCampData(String name, String location, String ticket, String description, String imageUri, double lat, double lng) {
         this.name = name;
         this.location = location;
         this.ticket = ticket;
         this.description = description;
         this.imageUri = imageUri;
+        this.lat = lat;
+        this.lng = lng;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public void setLng(double lng) {
+        this.lng = lng;
     }
 
     public String getName() {

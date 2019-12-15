@@ -47,6 +47,8 @@ public class ListGroundActivity extends AppCompatActivity {
                         bundle.putString("ticket",campData.get(item).getTicket());
                         bundle.putString("desc",campData.get(item).getDescription());
                         bundle.putString("image",campData.get(item).getImageUri());
+                        bundle.putDouble("lat",campData.get(item).getLat());
+                        bundle.putDouble("lng",campData.get(item).getLng());
 
                         Intent inten = new Intent(ListGroundActivity.this, GroundContent.class);
                         inten.putExtras(bundle);
@@ -71,8 +73,10 @@ public class ListGroundActivity extends AppCompatActivity {
                 String ticket = menuItemObject.getString("ticket");
                 String desc = menuItemObject.getString("desc");
                 String image = menuItemObject.getString("image");
+                Double lat = menuItemObject.getDouble("lat");
+                Double lng = menuItemObject.getDouble("lng");
 
-                GroundCampData pojo = new GroundCampData(name, location, ticket,desc,image);
+                GroundCampData pojo = new GroundCampData(name, location, ticket,desc,image,lat,lng);
                 campData.add(pojo);
             }
         } catch (IOException | JSONException exception) {

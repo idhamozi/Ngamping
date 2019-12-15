@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Midterm</string>
+    <string name="app_name">Ngamping</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">LOGIN</string>
+    <string name="view_map">View Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
